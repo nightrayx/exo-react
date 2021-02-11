@@ -2,37 +2,31 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-top: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form input[name="city"],
+form input[name="country"] {
+  background-color: transparent;
   color: white;
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+  border-radius: 0;
+}
+  
+.container {
+  margin-top: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.container input,
+.container ::-webkit-input-placeholder {
+  color: white !important;
+}
+.container input:focus {
+  background-color: transparent;
+  box-shadow: none !important;
+  border: none;
+  border-bottom: 2px solid tomato;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
