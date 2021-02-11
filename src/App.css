@@ -6,8 +6,8 @@ form {
   margin-top: 3rem;
 }
 
-form input[name="city"],
-form input[name="country"] {
+form input[name="ville"],
+form input[name="pays"] {
   background-color: transparent;
   color: white;
   border: none;

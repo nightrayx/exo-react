@@ -68,8 +68,9 @@ class App extends React.Component {
   getVille = async e => {
     e.preventDefault();
 
-    const ville = e.target.elements.ville.value;
     const pays = e.target.elements.pays.value;
+    const ville = e.target.elements.ville.value;
+  
 
 
  if (pays && ville) {
@@ -90,7 +91,7 @@ class App extends React.Component {
         error: false
       });
 
-      // seting icons
+
       this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
 
       console.log(response);
