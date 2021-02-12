@@ -19,15 +19,7 @@ const Meteo = props => {
               autoComplete="off"
             />
           </div>
-          <div className="col-md-3">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="pays"
-              name="pays"
-              autoComplete="off"
-            />
-          </div>
+    
           <div className="col-md-3 mt-md-0 mt-2 text-md-left ">
             <button className="btn btn-warning">chercher</button>
           </div>

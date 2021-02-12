@@ -13,7 +13,6 @@ class App extends React.Component {
     super();
     this.state={
       ville: undefined,
-      pays: undefined,
       icon:undefined,
       main:undefined,
       celsius:undefined,
@@ -68,20 +67,19 @@ class App extends React.Component {
   getVille = async e => {
     e.preventDefault();
 
-    const pays = e.target.elements.pays.value;
     const ville = e.target.elements.ville.value;
   
 
 
- if (pays && ville) {
+ if (ville) {
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${ville},${pays}&appid=${Api_Key}`
+        `http://api.openweathermap.org/data/2.5/weather?q=${ville}&appid=${Api_Key}`
       );
 
       const reponse = await api_call.json();
 
       this.setState({
-        ville: `${reponse.name}, ${reponse.sys.pays}`,
+        ville: `${reponse.name}, ${reponse.sys.country}`,
         pays: reponse.sys.country,
         main: reponse.weather[0].main,
         celsius: this.calCelsius(reponse.main.temp),
