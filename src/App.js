@@ -78,23 +78,23 @@ class App extends React.Component {
         `http://api.openweathermap.org/data/2.5/weather?q=${ville},${pays}&appid=${Api_Key}`
       );
 
-      const response = await api_call.json();
+      const reponse = await api_call.json();
 
       this.setState({
-        ville: `${response.name}, ${response.sys.pays}`,
-        pays: response.sys.pays,
-        main: response.weather[0].main,
-        celsius: this.calCelsius(response.main.temp),
-        temp_max: this.calCelsius(response.main.temp_max),
-        temp_min: this.calCelsius(response.main.temp_min),
-        description: response.weather[0].description,
+        ville: `${reponse.name}, ${reponse.sys.pays}`,
+        pays: reponse.sys.pays,
+        main: reponse.weather[0].main,
+        celsius: this.calCelsius(reponse.main.temp),
+        temp_max: this.calCelsius(reponse.main.temp_max),
+        temp_min: this.calCelsius(reponse.main.temp_min),
+        description: reponse.weather[0].description,
         error: false
       });
 
 
-      this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
+      this.get_WeatherIcon(this.weatherIcon, reponse.weather[0].id);
 
-      console.log(response);
+      console.log(reponse);
     } else {
       this.setState({
         error: true
