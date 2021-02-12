@@ -2,7 +2,7 @@
 import React from "react";
 import "../App.css";
 
-const Form = props => {
+const Meteo = props => {
   return (
     <div className="container h-100">
       <form onSubmit={props.loadweather}>
@@ -27,7 +27,7 @@ const Form = props => {
             />
           </div>
           <div className="col-md-3 mt-md-0 mt-2 text-md-left ">
-            <button className="btn btn-warning">Meteo</button>
+            <button className="btn btn-warning">chercher</button>
           </div>
         </div>
       </form>
@@ -43,4 +43,4 @@ const error = props => {
   );
 };
 
-export default Form;
+export default Meteo; 
