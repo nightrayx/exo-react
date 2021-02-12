@@ -79,8 +79,8 @@ class App extends React.Component {
       const reponse = await api_call.json();
 
       this.setState({
-        ville: `${reponse.name}, ${reponse.sys.country}`,
-        pays: reponse.sys.country,
+        ville: `${reponse.name}, ${reponse.sys.country},
+         ${reponse.main.humidity }°,pression ${reponse.main.pressure }`,
         main: reponse.weather[0].main,
         celsius: this.calCelsius(reponse.main.temp),
         temp_max: this.calCelsius(reponse.main.temp_max),
@@ -108,6 +108,7 @@ class App extends React.Component {
         <Ville
           villename={this.state.ville}
           weatherIcon={this.state.icon}
+          humidity={this.state.humidity}
           temp_celsius={this.state.celsius}
           temp_max={this.state.temp_max}
           temp_min={this.state.temp_min}
