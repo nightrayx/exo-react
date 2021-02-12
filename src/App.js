@@ -4,6 +4,9 @@ import Meteo from './components/Meteo'
 import Ville from './components/Ville'
 import'bootstrap/dist/css/bootstrap.min.css';
 import 'weather-icons/css/weather-icons.css';
+import Map from './components/Map'
+
+
 
 const Api_Key = "d3f6aac75e30840a28b779820d6e428a";
 
@@ -114,6 +117,7 @@ class App extends React.Component {
           temp_min={this.state.temp_min}
           description={this.state.description}
         />
+        <Map/>
       </div>
     );
   }
