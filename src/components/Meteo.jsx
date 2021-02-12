@@ -32,7 +32,7 @@ const Meteo = props => {
 const error = props => {
   return (
     <div className="alert alert-danger mx-5" role="alert">
-      Recherche ville et pays 
+      Recherche ville 
     </div>
   );
 };
