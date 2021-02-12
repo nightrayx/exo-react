@@ -29,4 +29,7 @@ form input[name="pays"] {
   border: none;
   border-bottom: 2px solid tomato;
 }
+.titre-1{
+  color: white !important;
+}
 
